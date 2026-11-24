@@ -26,7 +26,7 @@ export default function AsciiField() {
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let cw = FS * 0.6;
-    let ch = FS * 1.15;
+    const ch = FS * 1.15;
     let cols = 0;
     let rows = 0;
     const mouse = { x: -1e4, y: -1e4 };

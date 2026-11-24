@@ -26,7 +26,7 @@ export default function Home() {
         <Converter />
 
         <footer className="mt-16 text-[11px] text-dim">
-          <span className="text-accent">//</span> move your cursor · click the background
+          <span className="text-accent">{"//"}</span> move your cursor · click the background
         </footer>
       </main>
     </>
