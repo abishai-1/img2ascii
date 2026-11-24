@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07090c;
+  --panel: #0c1016;
+  --line: #1e2631;
+  --fg: #d6dde6;
+  --dim: #6b7787;
+  --accent: #5cf29a;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-dim: var(--dim);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Box-drawing glyphs: system mono fonts that are known to include them. */
+.font-banner {
+  font-family: "Cascadia Mono", Consolas, Menlo, "DejaVu Sans Mono",
+    var(--font-geist-mono), monospace;
+}
+
+input[type="range"] {
+  accent-color: var(--accent);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+  }
+}
