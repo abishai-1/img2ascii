@@ -29,16 +29,5 @@ npm run build    # static site -> web/out/
 ```
 
 Everything runs in the browser: images are never uploaded.
-
-### Deploy to Cloudflare Pages
-
-1. Push this repo to GitHub.
-2. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**, pick the repo.
-3. Build settings:
-   - **Framework preset:** Next.js (Static HTML Export)
-   - **Root directory:** `web`
-   - **Build command:** `npm run build`
-   - **Build output directory:** `out`
-4. Deploy. Every push to `main` redeploys automatically.
-
-The Node version for the build is pinned in `web/.node-version`.
+cally.
+The Nde version for the build is pinned in `web/.node-version`.
